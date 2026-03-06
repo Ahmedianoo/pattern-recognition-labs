@@ -12,11 +12,12 @@ class BayesClassifier():
         
         # TODO 1: Assert that mode is one of ['QDA', 'LDA', 'Naive'] and set it to self.mode
         # assert goes here
-        self.mode = None
+        assert mode in ['QDA', 'LDA', 'Naive'], "your mode has to be in one of ['QDA', 'LDA', 'Naive']"
+        self.mode = mode
 
     def fit(self, x_train: np.ndarray, y_train: np.ndarray):
         # TODO 2: Extract the labels from y_train using Numpy
-        self.labels = None
+        self.labels = np.unique(y_train)
         # TODO 3: Compute the model parameters
         for label in self.labels:
             # TODO 3.1: Extract the data belonging to the current class
