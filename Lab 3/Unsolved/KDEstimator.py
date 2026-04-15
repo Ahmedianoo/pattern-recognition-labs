@@ -63,7 +63,7 @@ class KDEstimator():
         scale = 1/(self.M)
         xₘ = self.x_train
         # TODO 8: Implement P as defined earlier; remember no for loops allowed for this file
-        return np.sum(self.φ(x-xₘ)) * scale 
+        return np.sum(self.ϕ(x-xₘ)) * scale 
     
     def transform(self, x_val):
         # TODO 9: Apply P to each row of (m,n) matrix x_val using np.apply_along_axis
